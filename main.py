@@ -480,7 +480,10 @@ content_script = r"""
 async def run_automation(ctx, username, password):
     await ctx.send("🚀 Starting automation...")
 
+    await ctx.send("🛠 Creating driver...")
     driver = create_driver()
+    await ctx.send("✅ Driver created.")
+
     wait = WebDriverWait(driver, 20)
 
     try:
